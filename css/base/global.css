@@ -1,0 +1,7 @@
+/* -- ESTILOS GENERALES -- */
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--light-bg);
+    color: var(--dark-text);
+}

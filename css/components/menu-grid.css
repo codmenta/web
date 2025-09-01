@@ -1,0 +1,136 @@
+/* -- 4. GRID DE CATEGORÍAS v2 -- */
+
+.menu-grid-v2 {
+    padding: 80px 50px;
+    background-color: #f4f4f4;
+    /* Fondo gris claro como en la imagen de referencia */
+}
+
+.grid-container-v2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.grid-item-v2 {
+    border-radius: 20px;
+    color: #fff;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+    min-height: 220px;
+    display: flex;
+    align-items: center;
+}
+
+.grid-item-text {
+    position: relative;
+    z-index: 2;
+    max-width: 60%;
+}
+
+.grid-item-text.text-dark {
+    color: var(--dark-text);
+    max-width: 100%;
+    text-align: center;
+    width: 100%;
+}
+
+.grid-item-v2 h3 {
+    font-family: var(--font-headline);
+    font-size: 2.8rem;
+    line-height: 1;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.grid-item-v2 p {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    max-width: 200px;
+}
+
+.grid-button {
+    background-color: var(--dark-text);
+    color: #fff;
+    border-radius: 8px;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.8rem;
+    display: inline-block;
+    transition: background-color 0.3s;
+    border: 2px solid var(--dark-text);
+    /* Borde opcional para contraste */
+}
+
+.grid-button:hover {
+    background-color: #000;
+}
+
+.grid-item-img {
+    position: absolute;
+    right: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 180px;
+    width: auto;
+    z-index: 1;
+    transition: transform 0.4s ease;
+}
+
+.grid-item-v2:hover .grid-item-img {
+    transform: translateY(-50%) scale(1.08);
+    /* Sutil efecto de zoom al pasar el mouse */
+}
+
+
+/* Paleta de colores para las nuevas tarjetas */
+
+.grid-item-v2.bg-green {
+    background-color: #0E9F6E;
+}
+
+.grid-item-v2.bg-orange {
+    background-color: #F97316;
+}
+
+.grid-item-v2.bg-green-light {
+    background-color: #78BC61;
+}
+
+.grid-item-v2.bg-blue {
+    background-color: #3B82F6;
+}
+
+.grid-item-v2.bg-magenta {
+    background-color: #9C27B0;
+}
+
+.grid-item-v2.bg-white {
+    background-color: #FFFFFF;
+}
+
+.grid-item-v2.bg-white .grid-button {
+    color: #fff;
+}
+
+
+/* Asegura texto blanco en botón para fondo blanco */
+
+@media (max-width: 768px) {
+    .menu-grid-v2 {
+        padding: 60px 20px;
+    }
+    .grid-item-text {
+        max-width: 100%;
+    }
+    .grid-item-img {
+        opacity: 0.3;
+        right: -60px;
+    }
+}

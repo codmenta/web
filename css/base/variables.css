@@ -1,0 +1,14 @@
+/* -- 1. VARIABLES -- */
+
+:root {
+    --primary-orange: #f57f17;
+    --primary-green: #388e3c;
+    --primary-magenta: #c2185b;
+    --dark-text: #212121;
+    --light-bg: #fdfaf6;
+    --font-headline: 'Lilita One', cursive;
+    --font-body: 'Poppins', sans-serif;
+    --shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    --img-bacon-burger: url("https://i.pinimg.com/originals/a8/fa/97/a8fa9799bfffd9ce9684823f64509dab.png");
+    --img-beef-burger: url("https://dianas-burgers.weeblyte.com/wp-content/uploads/2023/06/efbfgbg-min-300x300.png");
+}

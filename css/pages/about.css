@@ -1,0 +1,225 @@
+/* -- 10. ESTILOS DE LA PÁGINA "ABOUT US" -- */
+
+.products-banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://politecnicointernacional.edu.co/wp-content/uploads/2024/10/Tecnolog%C2%A1a-en-Gastronom%C2%A1a-y-Arte-Culinario.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.section-tag {
+    display: inline-block;
+    padding: 8px 20px;
+    font-family: var(--font-body);
+    font-weight: 700;
+    color: #fff;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.bg-blue {
+    background-color: #1976D2;
+}
+
+
+/* Un azul para los testimonios */
+
+.about-section-v2 {
+    padding: 80px 50px;
+    background-color: var(--light-bg);
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    max-width: 100%;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    font-family: var(--font-headline);
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+}
+
+.features-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin: 20px 0 30px;
+}
+
+.features-list li {
+    font-weight: 500;
+}
+
+.features-list i {
+    color: var(--primary-green);
+    margin-right: 8px;
+}
+
+.owner-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.owner-info img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.owner-info h4 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.owner-info span {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-family: var(--font-headline);
+    font-size: 2.8rem;
+    text-transform: uppercase;
+}
+
+.team-section {
+    padding: 80px 50px;
+    background-color: #fff;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.team-card {
+    background-color: var(--light-bg);
+    border: 1px solid #eee;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+}
+
+.team-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+}
+
+.team-card span {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.team-card h3 {
+    font-family: var(--font-headline);
+    font-size: 1.5rem;
+    margin: 5px 0 10px;
+}
+
+.social-links {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-links a {
+    color: var(--dark-text);
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--primary-orange);
+}
+
+.testimonials-section-v2 {
+    padding: 80px 50px;
+    background-color: var(--light-bg);
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.testimonial-card-v2 {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 15px;
+    padding: 30px;
+    position: relative;
+}
+
+.quote-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 3rem;
+    color: #e0e0e0;
+    z-index: 1;
+}
+
+.customer-info-v2 {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.customer-info-v2 img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.customer-info-v2 h4 {
+    font-weight: 700;
+    margin: 0;
+}
+
+.customer-info-v2 span {
+    color: #777;
+}

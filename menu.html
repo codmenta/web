@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú - Savory Bites</title>
+    <!-- RUTA CORREGIDA AL CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Savory Bites <i class="fas fa-burger"></i></a>
+            <ul class="nav-links">
+                <li><a href="menu.html" class="nav-link active">Menú</a></li>
+                <li><a href="about.html" class="nav-link">Nosotros</a></li>
+                <li><a href="index.html#testimonials" class="nav-link">Opiniones</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contacto</a></li>
+            </ul>
+            <div class="nav-icons"><a href="#"><i class="fas fa-search"></i></a><a href="#"><i class="fas fa-shopping-cart"></i></a></div>
+            <div class="hamburger"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
+        </nav>
+    </header>
+    <div class="search-overlay">
+        <div class="search-overlay-close">&times;</div>
+        <div class="search-overlay-content">
+            <form action="#" class="search-form">
+                <input type="text" placeholder="BUSCAR PRODUCTOS..." class="search-input">
+                <button type="submit" class="search-button"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+    </div>
+    <section class="menu-banner">
+        <h1>MENU</h1>
+    </section>
+
+    <div class="page-container">
+        <aside class="sidebar">
+            <div class="sidebar-widget">
+                <h3><span>Product Categories</span></h3>
+                <ul>
+                    <li><a href="#" data-category="all" class="active">All Products</a> <span>(3)</span></li>
+                    <li><a href="#" data-category="burgers">Burgers</a> <span>(2)</span></li>
+                    <li><a href="#" data-category="pizza">Pizza</a> <span>(1)</span></li>
+                    <li><a href="#" data-category="sandwiches">Sandwiches</a> <span>(0)</span></li>
+                </ul>
+            </div>
+            <div class="sidebar-widget">
+                <h3><span>Availability</span></h3>
+                <form>
+                    <label><input type="checkbox" id="in-stock" checked> In Stock</label>
+                    <label><input type="checkbox" id="out-of-stock" checked> Out of Stock</label>
+                </form>
+            </div>
+            <div class="sidebar-widget">
+                <h3><span>Featured Product</span></h3>
+                <ul class="featured-products">
+                    <li>
+                        <img src="https://i.pinimg.com/originals/a8/fa/97/a8fa9799bfffd9ce9684823f64509dab.png" alt="Burger">
+                        <div>
+                            <h4>Burger with Bacon</h4>
+                            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <p class="price">$5.00</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="https://www.pngkey.com/png/full/23-230264_image-result-for-burger-transparent-hamburguesa-con-queso.png" alt="Beef Snap Burger">
+                        <div>
+                            <h4>Burger with Beef Snap</h4>
+                            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <p class="price">$8.00</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="https://freepngimg.com/thumb/pizza/5-2-pizza-png-picture.png" alt="Margherita Pizza">
+                        <div>
+                            <h4>Margherita Pizza</h4>
+                            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            <p class="price">$12.00</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+        <main class="product-listing">
+            <div class="toolbar">
+                <p>3 PRODUCTS</p>
+                <select id="sort-by">
+                    <option value="alphabetical">Sort By: Alphabetically, A-Z</option>
+                    <option value="price-low">Sort By: Price, low to high</option>
+                    <option value="price-high">Sort By: Price, high to low</option>
+                </select>
+            </div>
+
+            <div class="product-grid">
+                <!-- PRODUCTOS CON DATA-ATTRIBUTES -->
+                <div class="product-card" data-category="burgers" data-stock="in-stock" data-price="5.00" data-name="Beef Snap Burger">
+                    <span class="new-tag">New</span>
+                    <img src="https://www.pngkey.com/png/full/23-230264_image-result-for-burger-transparent-hamburguesa-con-queso.png" alt="Beef Snap Burger">
+                    <div class="card-content">
+                        <h3>BEEF SNAP BURGER</h3>
+                        <p class="price">$5.00</p>
+                        <button class="add-to-cart-btn">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="product-card" data-category="burgers" data-stock="in-stock" data-price="8.00" data-name="Burger with Bacon">
+                    <span class="new-tag">New</span>
+                    <img src="https://i.pinimg.com/originals/a8/fa/97/a8fa9799bfffd9ce9684823f64509dab.png" alt="Burger with Bacon">
+                    <div class="card-content">
+                        <h3>BURGER WITH BACON</h3>
+                        <p class="price">$8.00</p>
+                        <button class="add-to-cart-btn">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="product-card" data-category="pizza" data-stock="out-of-stock" data-price="12.00" data-name="Margherita Pizza">
+                    <span class="out-of-stock-tag">Out of Stock</span>
+                    <img src="https://freepngimg.com/thumb/pizza/5-2-pizza-png-picture.png" alt="Margherita Pizza">
+                    <div class="card-content">
+                        <h3>MARGHERITA PIZZA</h3>
+                        <p class="price">$12.00</p>
+                        <button class="add-to-cart-btn" disabled>OUT OF STOCK</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+    <!-- RUTA CORREGIDA AL JS -->
+    <script src="js/script.js"></script>
+    <div class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Tu Carrito</h3>
+            <div class="cart-close">&times;</div>
+        </div>
+        <div class="cart-body">
+            <!-- Los productos del carrito se agregarían aquí dinámicamente -->
+            <p class="cart-empty">Tu carrito está vacío.</p>
+        </div>
+        <div class="cart-footer">
+            <div class="subtotal">
+                <span>Subtotal:</span>
+                <span>$0.00</span>
+            </div>
+            <a href="#" class="checkout-btn">Finalizar Compra</a>
+        </div>
+    </div>
+</body>
+
+</html>

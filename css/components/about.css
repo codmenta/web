@@ -1,0 +1,117 @@
+/* ===== INICIA EL CSS PARA LA NUEVA SECCIÓN DE INGREDIENTES (REEMPLAZA A .about-section) ===== */
+
+
+/* -- 12. SECCIÓN DE INGREDIENTES (Página de Inicio) -- */
+
+.ingredients-section {
+    padding: 80px 50px;
+    background-color: var(--light-bg);
+    text-align: center;
+}
+
+.ingredients-container {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 40px auto 0;
+}
+
+.ingredients-col {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    /* Espacio entre los grupos de ingredientes */
+}
+
+.left-col {
+    text-align: right;
+    align-items: flex-end;
+}
+
+.right-col {
+    text-align: left;
+    align-items: flex-start;
+}
+
+.ingredients-col h3 {
+    font-family: var(--font-headline);
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+
+/* Clases de colores para los títulos */
+
+.text-orange {
+    color: #F97316;
+}
+
+.text-green {
+    color: #388e3c;
+}
+
+.text-light-green {
+    color: #78BC61;
+}
+
+.text-magenta {
+    color: #9C27B0;
+}
+
+.ingredients-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.ingredients-col li {
+    position: relative;
+    padding-left: 15px;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+
+/* Viñetas personalizadas como en la imagen */
+
+.ingredients-col li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--dark-text);
+    font-weight: 700;
+}
+
+.ingredients-image img {
+    max-width: 450px;
+    width: 100%;
+    /* Tus propiedades CSS específicas */
+    overflow-clip-margin: content-box;
+    overflow: clip;
+    overflow-x: 50;
+    overflow-y: 50;
+}
+
+
+/* Media queries para la nueva sección */
+
+@media (max-width: 900px) {
+    .ingredients-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .ingredients-image {
+        order: -1;
+        /* Mueve la imagen al principio en móvil */
+    }
+    .left-col,
+    .right-col {
+        text-align: center;
+        align-items: center;
+    }
+}
+
+
+/* ===== FINALIZA EL CSS PARA LA NUEVA SECCIÓN ===== */
