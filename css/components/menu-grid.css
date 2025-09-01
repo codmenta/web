@@ -2,7 +2,7 @@
 
 .menu-grid-v2 {
     padding: 80px 50px;
-    background-color: #f4f4f4;
+    background-color: #fcf9f9;
     /* Fondo gris claro como en la imagen de referencia */
 }
 
@@ -56,7 +56,7 @@
 
 .grid-button {
     background-color: var(--dark-text);
-    color: #fff;
+    color: #f3f3f3;
     border-radius: 8px;
     padding: 10px 20px;
     text-decoration: none;
@@ -69,7 +69,7 @@
 }
 
 .grid-button:hover {
-    background-color: #000;
+    background-color: #c2185b;
 }
 
 .grid-item-img {
@@ -92,27 +92,27 @@
 /* Paleta de colores para las nuevas tarjetas */
 
 .grid-item-v2.bg-green {
-    background-color: #0E9F6E;
+    background-color: #bcc975;
 }
 
 .grid-item-v2.bg-orange {
-    background-color: #F97316;
+    background-color: #ffe8d7;
 }
 
 .grid-item-v2.bg-green-light {
-    background-color: #78BC61;
+    background-color: #ec4141;
 }
 
 .grid-item-v2.bg-blue {
-    background-color: #3B82F6;
+    background-color: #472e09;
 }
 
 .grid-item-v2.bg-magenta {
-    background-color: #9C27B0;
+    background-color: #75d181;
 }
 
 .grid-item-v2.bg-white {
-    background-color: #FFFFFF;
+    background-color: #ffffe8;
 }
 
 .grid-item-v2.bg-white .grid-button {

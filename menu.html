@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menú - Savory Bites</title>
-    <!-- RUTA CORREGIDA AL CSS -->
+    <title>Menú - Savory Ice</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,7 +15,7 @@
 <body>
     <header>
         <nav>
-            <a href="index.html" class="logo">Savory Bites <i class="fas fa-burger"></i></a>
+            <a href="index.html" class="logo">Savory Ice <i class="fas fa-ice-cream"></i></a>
             <ul class="nav-links">
                 <li><a href="menu.html" class="nav-link active">Menú</a></li>
                 <li><a href="about.html" class="nav-link">Nosotros</a></li>
@@ -31,56 +30,56 @@
         <div class="search-overlay-close">&times;</div>
         <div class="search-overlay-content">
             <form action="#" class="search-form">
-                <input type="text" placeholder="BUSCAR PRODUCTOS..." class="search-input">
+                <input type="text" placeholder="BUSCAR SABORES..." class="search-input">
                 <button type="submit" class="search-button"><i class="fas fa-search"></i></button>
             </form>
         </div>
     </div>
     <section class="menu-banner">
-        <h1>MENU</h1>
+        <h1>MENÚ DE SABORES</h1>
     </section>
 
     <div class="page-container">
         <aside class="sidebar">
             <div class="sidebar-widget">
-                <h3><span>Product Categories</span></h3>
+                <h3><span>Categorías de Helados</span></h3>
                 <ul>
-                    <li><a href="#" data-category="all" class="active">All Products</a> <span>(3)</span></li>
-                    <li><a href="#" data-category="burgers">Burgers</a> <span>(2)</span></li>
-                    <li><a href="#" data-category="pizza">Pizza</a> <span>(1)</span></li>
-                    <li><a href="#" data-category="sandwiches">Sandwiches</a> <span>(0)</span></li>
+                    <li><a href="#" data-category="all" class="active">Todos los sabores</a> <span>(3)</span></li>
+                    <li><a href="#" data-category="frutas">Frutales</a> <span>(2)</span></li>
+                    <li><a href="#" data-category="cremosos">Cremosos</a> <span>(1)</span></li>
+                    <li><a href="#" data-category="especiales">Especiales</a> <span>(0)</span></li>
                 </ul>
             </div>
             <div class="sidebar-widget">
-                <h3><span>Availability</span></h3>
+                <h3><span>Disponibilidad</span></h3>
                 <form>
-                    <label><input type="checkbox" id="in-stock" checked> In Stock</label>
-                    <label><input type="checkbox" id="out-of-stock" checked> Out of Stock</label>
+                    <label><input type="checkbox" id="in-stock" checked> Disponibles</label>
+                    <label><input type="checkbox" id="out-of-stock" checked> Agotados</label>
                 </form>
             </div>
             <div class="sidebar-widget">
-                <h3><span>Featured Product</span></h3>
+                <h3><span>Helado Destacado</span></h3>
                 <ul class="featured-products">
                     <li>
-                        <img src="https://i.pinimg.com/originals/a8/fa/97/a8fa9799bfffd9ce9684823f64509dab.png" alt="Burger">
+                        <img src="https://cdn.pixabay.com/photo/2018/05/21/10/25/ice-cream-3410654_1280.png" alt="Helado maracumango">
                         <div>
-                            <h4>Burger with Bacon</h4>
+                            <h4>Helado Maracumango</h4>
                             <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
                             <p class="price">$5.00</p>
                         </div>
                     </li>
                     <li>
-                        <img src="https://www.pngkey.com/png/full/23-230264_image-result-for-burger-transparent-hamburguesa-con-queso.png" alt="Beef Snap Burger">
+                        <img src="https://cdn.pixabay.com/photo/2018/04/30/17/09/ice-cream-3360325_1280.png" alt="Helado Cookies and Cream">
                         <div>
-                            <h4>Burger with Beef Snap</h4>
+                            <h4>Cookies & Cream</h4>
                             <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
                             <p class="price">$8.00</p>
                         </div>
                     </li>
                     <li>
-                        <img src="https://freepngimg.com/thumb/pizza/5-2-pizza-png-picture.png" alt="Margherita Pizza">
+                        <img src="https://cdn.pixabay.com/photo/2018/06/27/07/33/ice-cream-3503861_1280.png" alt="Helado Frutos Rojos">
                         <div>
-                            <h4>Margherita Pizza</h4>
+                            <h4>Frutos Rojos</h4>
                             <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
                             <p class="price">$12.00</p>
                         </div>
@@ -91,41 +90,41 @@
 
         <main class="product-listing">
             <div class="toolbar">
-                <p>3 PRODUCTS</p>
+                <p>3 SABORES</p>
                 <select id="sort-by">
-                    <option value="alphabetical">Sort By: Alphabetically, A-Z</option>
-                    <option value="price-low">Sort By: Price, low to high</option>
-                    <option value="price-high">Sort By: Price, high to low</option>
+                    <option value="alphabetical">Ordenar: Alfabéticamente, A-Z</option>
+                    <option value="price-low">Ordenar: Precio, menor a mayor</option>
+                    <option value="price-high">Ordenar: Precio, mayor a menor</option>
                 </select>
             </div>
 
             <div class="product-grid">
-                <!-- PRODUCTOS CON DATA-ATTRIBUTES -->
-                <div class="product-card" data-category="burgers" data-stock="in-stock" data-price="5.00" data-name="Beef Snap Burger">
-                    <span class="new-tag">New</span>
-                    <img src="https://www.pngkey.com/png/full/23-230264_image-result-for-burger-transparent-hamburguesa-con-queso.png" alt="Beef Snap Burger">
+                <!-- PRODUCTOS -->
+                <div class="product-card" data-category="frutas" data-stock="in-stock" data-price="5.00" data-name="Helado Maracumango">
+                    <span class="new-tag">Nuevo</span>
+                    <img src="https://cdn.pixabay.com/photo/2018/05/21/10/25/ice-cream-3410654_1280.png" alt="Helado Maracumango">
                     <div class="card-content">
-                        <h3>BEEF SNAP BURGER</h3>
+                        <h3>HELADO MARACUMANGO</h3>
                         <p class="price">$5.00</p>
-                        <button class="add-to-cart-btn">ADD TO CART</button>
+                        <button class="add-to-cart-btn">AGREGAR</button>
                     </div>
                 </div>
-                <div class="product-card" data-category="burgers" data-stock="in-stock" data-price="8.00" data-name="Burger with Bacon">
-                    <span class="new-tag">New</span>
-                    <img src="https://i.pinimg.com/originals/a8/fa/97/a8fa9799bfffd9ce9684823f64509dab.png" alt="Burger with Bacon">
+                <div class="product-card" data-category="cremosos" data-stock="in-stock" data-price="8.00" data-name="Cookies & Cream">
+                    <span class="new-tag">Nuevo</span>
+                    <img src="https://cdn.pixabay.com/photo/2018/04/30/17/09/ice-cream-3360325_1280.png" alt="Cookies & Cream">
                     <div class="card-content">
-                        <h3>BURGER WITH BACON</h3>
+                        <h3>COOKIES & CREAM</h3>
                         <p class="price">$8.00</p>
-                        <button class="add-to-cart-btn">ADD TO CART</button>
+                        <button class="add-to-cart-btn">AGREGAR</button>
                     </div>
                 </div>
-                <div class="product-card" data-category="pizza" data-stock="out-of-stock" data-price="12.00" data-name="Margherita Pizza">
-                    <span class="out-of-stock-tag">Out of Stock</span>
-                    <img src="https://freepngimg.com/thumb/pizza/5-2-pizza-png-picture.png" alt="Margherita Pizza">
+                <div class="product-card" data-category="frutas" data-stock="out-of-stock" data-price="12.00" data-name="Frutos Rojos">
+                    <span class="out-of-stock-tag">Agotado</span>
+                    <img src="https://cdn.pixabay.com/photo/2018/06/27/07/33/ice-cream-3503861_1280.png" alt="Frutos Rojos">
                     <div class="card-content">
-                        <h3>MARGHERITA PIZZA</h3>
+                        <h3>FRUTOS ROJOS</h3>
                         <p class="price">$12.00</p>
-                        <button class="add-to-cart-btn" disabled>OUT OF STOCK</button>
+                        <button class="add-to-cart-btn" disabled>AGOTADO</button>
                     </div>
                 </div>
             </div>
@@ -133,17 +132,14 @@
     </div>
 
     <div id="footer-placeholder"></div>
-
-    <!-- RUTA CORREGIDA AL JS -->
     <script src="js/script.js"></script>
     <div class="cart-sidebar">
         <div class="cart-header">
-            <h3>Tu Carrito</h3>
+            <h3>Tu Pedido</h3>
             <div class="cart-close">&times;</div>
         </div>
         <div class="cart-body">
-            <!-- Los productos del carrito se agregarían aquí dinámicamente -->
-            <p class="cart-empty">Tu carrito está vacío.</p>
+            <p class="cart-empty">Tu pedido está vacío.</p>
         </div>
         <div class="cart-footer">
             <div class="subtotal">

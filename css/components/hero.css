@@ -27,7 +27,7 @@
     font-size: 1.1rem;
     margin: 20px 0 30px;
     max-width: 500px;
-    color: #555;
+    color: #cecece;
 }
 
 .cta-button {
@@ -43,7 +43,7 @@
 }
 
 .cta-button:hover {
-    background-color: #fb8c00;
+    background-color: #fb6400;
     transform: translateY(-3px);
 }
 
@@ -90,7 +90,7 @@
 
 .ingredient-icons i {
     font-size: 1.9rem;
-    color: #444;
+    color: #cecece;
 }
 
 .more-ingredients {

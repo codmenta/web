@@ -1,11 +1,11 @@
 /* -- 1. VARIABLES -- */
 
 :root {
-    --primary-orange: #f57f17;
-    --primary-green: #388e3c;
+    --primary-orange: #ffcc55;
+    --primary-green: #FF6B6B;
     --primary-magenta: #c2185b;
-    --dark-text: #212121;
-    --light-bg: #fdfaf6;
+    --dark-text: #333;
+    --light-bg: #FFF8F0;
     --font-headline: 'Lilita One', cursive;
     --font-body: 'Poppins', sans-serif;
     --shadow: 0 8px 25px rgba(0, 0, 0, 0.1);

@@ -3,6 +3,9 @@
 .testimonials-section {
     padding: 80px 50px;
 }
+h2 {
+    color: #FF6B6B;
+}
 
 .testimonials-section h2 {
     font-family: var(--font-headline);
