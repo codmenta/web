@@ -1,164 +1,680 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Savory Ice - Helados Artesanales y Sabores Únicos</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="ICEKING — Paletas artesanales hechas con ingredientes reales, naturales y mucho amor." />
+<title>ICEKING — The Royal Treats | Paletas Artesanales</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-    <header>
-        <nav>
-            <a href="index.html" class="logo">Savory Ice <i class="fas fa-ice-cream"></i></a>
-            <ul class="nav-links">
-                <li><a href="menu.html" class="nav-link">Menú</a></li>
-                <li><a href="about.html" class="nav-link">Nosotros</a></li>
-                <li><a href="#testimonials" class="nav-link">Opiniones</a></li>
-                <li><a href="#contact" class="nav-link">Contacto</a></li>
-            </ul>
-            <div class="nav-icons"><a href="#"><i class="fas fa-search"></i></a><a href="#"><i class="fas fa-shopping-cart"></i></a></div>
-            <div class="hamburger"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
-        </nav>
-    </header>
-    <div class="search-overlay">
-        <div class="search-overlay-close">&times;</div>
-        <div class="search-overlay-content">
-            <form action="#" class="search-form">
-                <input type="text" placeholder="BUSCAR SABORES..." class="search-input">
-                <button type="submit" class="search-button"><i class="fas fa-search"></i></button>
+
+  <div class="toast-container" id="toastContainer"></div>
+  <div class="overlay" id="overlay"></div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#" class="logo" data-nav="inicio">
+        <span class="logo-crown">👑</span>
+        <span class="logo-text">
+          <span class="logo-name">ICEKING</span>
+          <span class="logo-tag">THE ROYAL TREATS</span>
+        </span>
+      </a>
+      <nav class="main-nav" id="mainNav">
+        <a class="nav-link active" data-nav="inicio">Inicio</a>
+        <a class="nav-link" data-nav="sabores">Sabores</a>
+        <a class="nav-link" data-nav="nosotros">Nosotros</a>
+        <a class="nav-link" data-nav="opiniones">Opiniones</a>
+        <a class="nav-link" data-nav="contacto">Contacto</a>
+        <div class="mobile-nav-actions">
+          <button class="btn btn-accent" data-nav="sabores">Pedir ahora 👑</button>
+        </div>
+      </nav>
+      <div class="header-actions">
+        <button class="btn btn-accent btn-pedir" data-nav="sabores">Pedir ahora <span>👑</span></button>
+        <button class="icon-btn" id="searchToggle" aria-label="Buscar">🔍</button>
+        <button class="icon-btn cart-toggle" id="cartToggle" aria-label="Carrito de compras">
+          🛒<span class="cart-badge" id="cartBadge">0</span>
+        </button>
+        <button class="icon-btn mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menú">☰</button>
+      </div>
+    </div>
+    <div class="search-bar" id="searchBar">
+      <div class="search-inner">
+        <span>🔍</span>
+        <input type="text" id="searchInput" placeholder="Buscar un sabor... (ej. mango, chocolate)">
+        <button class="icon-btn" id="searchClose" aria-label="Cerrar búsqueda">✕</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ================= INICIO ================= -->
+    <section class="page active" id="page-inicio">
+
+      <section class="hero">
+        <div class="container hero-inner">
+          <div class="hero-content">
+            <h1>El trato real que tu paladar merece</h1>
+            <div class="divider"><span class="divider-line"></span><span class="divider-icon">👑</span><span class="divider-line"></span></div>
+            <p class="hero-text">Paletas artesanales hechas con ingredientes reales, naturales y mucho amor.</p>
+            <button class="btn btn-primary" data-nav="sabores">Haz tu pedido ahora <span>→</span></button>
+            <div class="hero-features">
+              <div class="hf-item"><span class="hf-icon">🍃</span><span>Ingredientes<br>Naturales</span></div>
+              <div class="hf-item"><span class="hf-icon">👑</span><span>Hechas a mano<br>con amor</span></div>
+              <div class="hf-item"><span class="hf-icon">💗</span><span>Sabor que<br>te enamora</span></div>
+              <div class="hf-item"><span class="hf-icon">❄️</span><span>Siempre<br>Frescas</span></div>
+            </div>
+          </div>
+          <div class="hero-media">
+            <div class="ph hero-ph">
+              <span class="ph-icon" style="font-size:4rem;">🍓</span>
+              <span class="ph-label">Imagen principal: paleta artesanal de fresa con crema</span>
+            </div>
+            <div class="badge-artesanal"><span>100%<br>♥<br>ARTESANAL</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section flavors-section">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow">NUESTROS SABORES</span>
+              <h2>Paletas que conquistan</h2>
+              <div class="divider"><span class="divider-line"></span><span class="divider-icon">👑</span></div>
+            </div>
+            <button class="btn btn-outline" data-nav="sabores">Ver todos los sabores <span>→</span></button>
+          </div>
+          <div class="flavors-grid" id="featuredGrid"></div>
+        </div>
+      </section>
+
+      <section class="section about-teaser">
+        <div class="container about-teaser-inner">
+          <div class="ph">
+            <span class="ph-icon" style="font-size:3rem;">👩‍🍳</span>
+            <span class="ph-label">Imagen: equipo ICEKING preparando paletas</span>
+          </div>
+          <div class="about-teaser-content">
+            <span class="eyebrow">NUESTRA HISTORIA</span>
+            <h2>Un reino hecho de sabor</h2>
+            <p>Desde 2019 creamos paletas artesanales pensadas para quien no se conforma con lo común: fruta real, procesos cuidadosos y mucho cariño en cada lote.</p>
+            <button class="btn btn-outline" data-nav="nosotros">Conócenos <span>→</span></button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section testi-section">
+        <div class="container">
+          <div class="section-head center">
+            <span class="eyebrow">OPINIONES</span>
+            <h2>Lo que dicen nuestros clientes</h2>
+            <div class="divider center"><span class="divider-line"></span><span class="divider-icon">👑</span><span class="divider-line"></span></div>
+          </div>
+          <div class="testi-grid" id="testiPreview"></div>
+          <div class="center-btn">
+            <button class="btn btn-outline" data-nav="opiniones">Ver todas las opiniones <span>→</span></button>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-banner">
+        <div class="container cta-inner">
+          <h2>¿Antojo de algo dulce y real?</h2>
+          <p>Haz tu pedido hoy y recibe tus paletas favoritas donde estés.</p>
+          <button class="btn btn-accent" data-nav="sabores">Pedir ahora <span>👑</span></button>
+        </div>
+      </section>
+
+    </section>
+
+    <!-- ================= SABORES ================= -->
+    <section class="page" id="page-sabores">
+      <div class="page-banner">
+        <div class="container">
+          <span class="eyebrow">NUESTROS SABORES</span>
+          <h1>Paletas que conquistan</h1>
+          <p>Doce sabores artesanales, hechos en pequeños lotes con fruta real.</p>
+        </div>
+      </div>
+      <section class="section">
+        <div class="container">
+          <div class="filter-chips" id="filterChips">
+            <button class="chip active" data-cat="todos">Todos</button>
+            <button class="chip" data-cat="frutal">Frutales</button>
+            <button class="chip" data-cat="cremosa">Cremosas</button>
+            <button class="chip" data-cat="especial">Especiales</button>
+          </div>
+          <div class="flavors-grid full" id="fullGrid"></div>
+        </div>
+      </section>
+    </section>
+
+    <!-- ================= NOSOTROS ================= -->
+    <section class="page" id="page-nosotros">
+      <div class="page-banner">
+        <div class="container">
+          <span class="eyebrow">SOBRE ICEKING</span>
+          <h1>Un reino hecho de sabor</h1>
+          <p>Conoce la historia detrás de cada paleta.</p>
+        </div>
+      </div>
+
+      <section class="section">
+        <div class="container about-story">
+          <div class="ph"><span class="ph-icon" style="font-size:3rem;">🏰</span><span class="ph-label">Imagen: primer local de ICEKING</span></div>
+          <div>
+            <span class="eyebrow">NUESTRA HISTORIA</span>
+            <h2>De una cocina pequeña a un reino de sabor</h2>
+            <p>ICEKING nació en 2019 en Bogotá, cuando dos amigos amantes de los postres decidieron crear paletas que se sintieran como un pequeño lujo cotidiano: sin conservantes, sin atajos, con fruta de verdad.</p>
+            <p>Hoy seguimos preparando cada paleta a mano, en lotes pequeños, cuidando cada detalle desde la selección de la fruta hasta el empaque final.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section values-section">
+        <div class="container">
+          <div class="section-head center">
+            <span class="eyebrow">NUESTROS VALORES</span>
+            <h2>Lo que nos hace reales</h2>
+          </div>
+          <div class="values-grid">
+            <div class="value-card"><span class="value-icon">🍃</span><h3>Ingredientes Naturales</h3><p>Fruta fresca de temporada, sin conservantes artificiales.</p></div>
+            <div class="value-card"><span class="value-icon">👑</span><h3>Hechas a mano con amor</h3><p>Producción artesanal en pequeños lotes para asegurar calidad.</p></div>
+            <div class="value-card"><span class="value-icon">💗</span><h3>Sabor que te enamora</h3><p>Combinaciones únicas que conquistan desde el primer bocado.</p></div>
+            <div class="value-card"><span class="value-icon">❄️</span><h3>Siempre Frescas</h3><p>Cadena de frío cuidada para que lleguen en su punto perfecto.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section process-section">
+        <div class="container">
+          <div class="section-head center">
+            <span class="eyebrow">CÓMO LO HACEMOS</span>
+            <h2>De la fruta a tu congelador</h2>
+          </div>
+          <div class="process-grid">
+            <div class="process-step"><span class="step-num">01</span><h3>Selección</h3><p>Escogemos la mejor fruta del día.</p></div>
+            <div class="process-step"><span class="step-num">02</span><h3>Preparación</h3><p>Mezclamos cada receta de forma artesanal.</p></div>
+            <div class="process-step"><span class="step-num">03</span><h3>Congelado</h3><p>Congelado lento para una textura cremosa.</p></div>
+            <div class="process-step"><span class="step-num">04</span><h3>Entrega</h3><p>Empacamos y llevamos frescura hasta tu puerta.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="stats-banner">
+        <div class="container stats-grid">
+          <div class="stat"><span class="stat-num">7+</span><span>Años creando sabor</span></div>
+          <div class="stat"><span class="stat-num">12</span><span>Sabores únicos</span></div>
+          <div class="stat"><span class="stat-num">15K+</span><span>Paletas disfrutadas</span></div>
+          <div class="stat"><span class="stat-num">100%</span><span>Ingredientes naturales</span></div>
+        </div>
+      </section>
+
+      <section class="section team-section">
+        <div class="container">
+          <div class="section-head center">
+            <span class="eyebrow">NUESTRO EQUIPO</span>
+            <h2>Las manos detrás de cada paleta</h2>
+          </div>
+          <div class="team-grid">
+            <div class="team-card"><div class="ph circle"><span class="ph-icon">👤</span></div><h3>Camila Restrepo</h3><p>Fundadora &amp; CEO</p></div>
+            <div class="team-card"><div class="ph circle"><span class="ph-icon">👤</span></div><h3>Andrés Salazar</h3><p>Chef de Sabores</p></div>
+            <div class="team-card"><div class="ph circle"><span class="ph-icon">👤</span></div><h3>Laura Jiménez</h3><p>Control de Calidad</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-banner">
+        <div class="container cta-inner">
+          <h2>¿Listo para probar el trato real?</h2>
+          <p>Descubre los doce sabores que tenemos para ti.</p>
+          <button class="btn btn-accent" data-nav="sabores">Ver sabores <span>👑</span></button>
+        </div>
+      </section>
+    </section>
+
+    <!-- ================= OPINIONES ================= -->
+    <section class="page" id="page-opiniones">
+      <div class="page-banner">
+        <div class="container">
+          <span class="eyebrow">OPINIONES</span>
+          <h1>Lo que dicen nuestros clientes</h1>
+          <p>Cientos de paladares reales, conquistados.</p>
+        </div>
+      </div>
+
+      <section class="section">
+        <div class="container">
+          <div class="rating-summary">
+            <div class="rating-big">
+              <span class="rating-num">4.9</span>
+              <span class="rating-stars">★★★★★</span>
+              <span class="rating-count">+320 opiniones</span>
+            </div>
+            <button class="btn btn-primary" id="openReviewModal">Escribir una opinión ✎</button>
+          </div>
+          <div class="reviews-grid" id="reviewsGrid"></div>
+        </div>
+      </section>
+    </section>
+
+    <!-- ================= CONTACTO ================= -->
+    <section class="page" id="page-contacto">
+      <div class="page-banner">
+        <div class="container">
+          <span class="eyebrow">CONTACTO</span>
+          <h1>Hablemos de sabores</h1>
+          <p>Escríbenos, llámanos o visítanos, ¡nos encanta saber de ti!</p>
+        </div>
+      </div>
+
+      <section class="section">
+        <div class="container">
+          <div class="contact-info-grid">
+            <div class="info-card"><span class="info-icon">📍</span><h3>Dirección</h3><p>Calle 123 #45-67<br>Bogotá, Colombia</p></div>
+            <div class="info-card"><span class="info-icon">🕒</span><h3>Horario</h3><p>Lunes - Domingo<br>11:00 a.m. - 10:00 p.m.</p></div>
+            <div class="info-card"><span class="info-icon">📞</span><h3>Teléfono</h3><p>+57 300 123 4567</p></div>
+            <div class="info-card"><span class="info-icon">✉️</span><h3>Email</h3><p>hola@iceking.com</p></div>
+          </div>
+
+          <div class="contact-main">
+            <form class="contact-form" id="contactForm">
+              <h2>Envíanos un mensaje</h2>
+              <div class="form-row">
+                <label>Nombre
+                  <input type="text" name="nombre" required placeholder="Tu nombre">
+                </label>
+                <label>Correo electrónico
+                  <input type="email" name="email" required placeholder="tucorreo@ejemplo.com">
+                </label>
+              </div>
+              <label>Mensaje
+                <textarea name="mensaje" rows="5" required placeholder="Cuéntanos en qué te podemos ayudar..."></textarea>
+              </label>
+              <button type="submit" class="btn btn-primary">Enviar mensaje <span>✉️</span></button>
             </form>
+            <div class="ph map-ph">
+              <span class="ph-icon" style="font-size:2.6rem;">🗺️</span>
+              <span class="ph-label">Mapa: ubicación de ICEKING en Bogotá</span>
+            </div>
+          </div>
         </div>
-    </div>
-    <main>
-        <!-- Hero 1 -->
-        <section class="hero">
-            <div class="hero-text">
-                <h1 class="hidden">REFRÉSCATE CON NUESTROS <span>HELADOS ARTESANALES</span></h1>
-                <p class="hidden">Sabores únicos como maracumango, frutos rojos, cookies & cream y muchas combinaciones sorprendentes.</p>
-                <div class="ingredients-block hidden">
-                    <h4>Sabores</h4>
-                    <div class="ingredient-icons"><i class="fas fa-lemon"></i> <i class="fas fa-ice-cream"></i> <i class="fas fa-pepper-hot"></i> <i class="fas fa-cookie"></i><span class="more-ingredients">+10</span></div>
-                </div>
-                <a href="menu.html" class="cta-button nav-link hidden">PRUÉBALOS YA</a>
-            </div>
-            <div class="hero-image hidden">
-                <img src="https://tudiariohuanuco.pe/wp-content/uploads/2020/01/helados.jpg" alt="Helado artesanal de frutas">
-            </div>
-        </section>
-        <!-- Hero 2 -->
-        <section class="hero">
-            <div class="hero-image hidden">
-                <img src="https://cdn.pixabay.com/photo/2018/05/21/10/25/ice-cream-3410654_1280.png" alt="Copa helada con topping">
-            </div>
-            <div class="hero-text">
-                <h1 class="hidden"><span>MALTEADAS</span> Y COPAS INCREÍBLES</h1>
-                <p class="hidden">Desde malteadas de Oreo hasta copas de maracumango con leche condensada, tenemos todo para endulzar tu día.</p>
-                <div class="ingredients-block hidden">
-                    <h4>Ingredientes</h4>
-                    <div class="ingredient-icons"><i class="fas fa-cookie"></i> <i class="fas fa-lemon"></i> <i class="fas fa-seedling"></i> <i class="fas fa-glass-whiskey"></i><span class="more-ingredients">+5</span></div>
-                </div>
-                <a href="about.html" class="cta-button nav-link hidden">VER MÁS</a>
-            </div>
-        </section>
+      </section>
+    </section>
 
-        <!-- Menú destacado -->
-        <section id="menu" class="menu-grid-v2">
-            <div class="grid-container-v2">
-                <div class="grid-item-v2 bg-green hidden">
-                    <div class="grid-item-text">
-                        <h3>MARACU <br>  MANGO</h3>
-                        <p>Una fusión tropical refrescante con notas dulces y ácidas.</p>
-                        <a href="menu.html" class="grid-button">VER MENÚ</a>
-                    </div>
-                    <img src="https://pasteleriasanantonio.com/programados/wp-content/uploads/2022/12/MaracuMango_heladeria_pasteleria_panaderia_sanantonio.png" alt="Helado maracumango" class="grid-item-img">
-                </div>
-                <div class="grid-item-v2 bg-orange hidden">
-                    <div class="grid-item-text">
-                        <h3>COOKIES<br>& CREAM</h3>
-                        <p>Galletas crocantes mezcladas en cremosa vainilla artesanal.</p>
-                        <a href="menu.html" class="grid-button">VER MENÚ</a>
-                    </div>
-                    <img src="https://www.benandjerrys.com.mx/files/live/sites/systemsite/files/US%20and%20Global%20Assets/Flavors/Product%20Assets/US/Chocolate%20Chip%20Cookie%20Dough%20Ice%20Cream/web_Tower_ChocolateChipCookieDough_RGB_HR2_60M.png" alt="Helado cookies and cream" class="grid-item-img">
-                </div>
-                <div class="grid-item-v2 bg-green-light hidden">
-                    <div class="grid-item-text">
-                        <h3>FRUTOS<br>ROJOS</h3>
-                        <p>Fresas, moras y arándanos combinados en un sabor único.</p>
-                        <a href="menu.html" class="grid-button">VER MENÚ</a>
-                    </div>
-                    <img src="https://hornolosabuelos.es/web/image/product.template/4248/image_1024?unique=18c82c2" alt="Helado frutos rojos" class="grid-item-img">
-                </div>
-                <div class="grid-item-v2 bg-blue hidden">
-                    <div class="grid-item-text">
-                        <h3>CHOCOLATE<br>EXTREMO</h3>
-                        <p>Helado intenso con trozos de brownie y chispas de cacao.</p>
-                        <a href="menu.html" class="grid-button"><h2>VER MENÚ</h2></a>
-                    </div>
-                    <img src="https://hornolosabuelos.es/web/image/product.template/4062/image_1024?unique=18c82c2" alt="Helado chocolate extremo" class="grid-item-img">
-                </div>
-                <div class="grid-item-v2 bg-magenta hidden">
-                    <div class="grid-item-text">
-                        <h3>PISTACHO<br>GOURMET</h3>
-                        <p>Delicioso helado cremoso con auténtico pistacho.</p>
-                        <a href="menu.html" class="grid-button">VER MENÚ</a>
-                    </div>
-                    <img src="https://png.pngtree.com/png-clipart/20250515/original/pngtree-a-creamy-scoop-of-pistachio-ice-cream-partially-melted-showcasing-light-png-image_20985857.png" alt="Helado pistacho" class="grid-item-img">
-                </div>
-                <div class="grid-item-v2 bg-white hidden">
-                    <div class="grid-item-text text-dark">
-                        <h3>Y<br>MUCHOS<br>MÁS.</h3>
-                        <a href="menu.html" class="grid-button">VER MÁS</a>
-                    </div>
-                </div>
-            </div>
-        </section>
+  </main>
 
-        <!-- Testimonios -->
-        <section id="testimonials" class="testimonials-section">
-            <h2 class="hidden"><span>CLIENTES FELICES</span></h2>
-            <div class="testimonials-container">
-                <div class="testimonial-card hidden">
-                    <p>"¡El helado de maracumango es una locura! Refrescante y delicioso, nunca había probado algo así."</p>
-                    <div class="customer-info"><img src="https://static.vecteezy.com/system/resources/previews/019/879/186/large_2x/user-icon-on-transparent-background-free-png.png" alt="Cliente 1">
-                        <h4>Ana García</h4>
-                    </div>
-                </div>
-                <div class="testimonial-card hidden">
-                    <p>"Excelente atención y sabores innovadores. Mi favorito: cookies & cream con topping de chocolate."</p>
-                    <div class="customer-info"><img src="https://static.vecteezy.com/system/resources/previews/019/879/186/large_2x/user-icon-on-transparent-background-free-png.png" alt="Cliente 2">
-                        <h4>Carlos Ruiz</h4>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-    <div id="footer-placeholder"></div>
-    <script src="js/script.js"></script>
-    
-    <div id="cart-placeholder"></div>
-    <div class="cart-sidebar">
-        <div class="cart-header">
-            <h3>Tu Pedido</h3>
-            <div class="cart-close">&times;</div>
+  <footer class="site-footer">
+    <div class="footer-wave"><svg viewBox="0 0 1200 40" preserveAspectRatio="none"><path d="M0,20 C150,40 350,0 600,20 C850,40 1050,0 1200,20 L1200,40 L0,40 Z" fill="#4c0e22"></path></svg></div>
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div class="logo footer-logo">
+          <span class="logo-crown">👑</span>
+          <span class="logo-text"><span class="logo-name">ICEKING</span><span class="logo-tag">THE ROYAL TREATS</span></span>
         </div>
-        <div class="cart-body">
-            <p class="cart-empty">Tu pedido está vacío.</p>
+        <p>El trato real que tu paladar merece. Paletas artesanales para endulzar tus mejores momentos.</p>
+        <div class="social-icons">
+          <button class="social-btn" data-social="Instagram">IG</button>
+          <button class="social-btn" data-social="Facebook">FB</button>
+          <button class="social-btn" data-social="TikTok">TT</button>
+          <button class="social-btn" data-social="WhatsApp">WA</button>
         </div>
-        <div class="cart-footer">
-            <div class="subtotal">
-                <span>Subtotal:</span>
-                <span>$0.00</span>
-            </div>
-            <a href="#" class="checkout-btn">Finalizar Compra</a>
-        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Enlaces</h4>
+        <a data-nav="inicio">Inicio</a>
+        <a data-nav="sabores">Sabores</a>
+        <a data-nav="nosotros">Nosotros</a>
+        <a data-nav="opiniones">Opiniones</a>
+        <a data-nav="contacto">Contacto</a>
+      </div>
+      <div class="footer-col">
+        <h4>Información</h4>
+        <p><span>📍</span>Calle 123 #45-67, Bogotá, Colombia</p>
+        <p><span>🕒</span>Lunes - Domingo, 11:00 a.m. - 10:00 p.m.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Contáctanos</h4>
+        <p><span>📞</span>+57 300 123 4567</p>
+        <p><span>✉️</span>hola@iceking.com</p>
+        <p><span>🌐</span>www.iceking.com</p>
+      </div>
     </div>
+    <div class="footer-bottom">
+      <div class="container">© 2026 ICEKING. Todos los derechos reservados.</div>
+    </div>
+  </footer>
+
+  <!-- Carrito -->
+  <aside class="drawer" id="cartDrawer">
+    <div class="drawer-head">
+      <h3>Tu carrito 🛒</h3>
+      <button class="icon-btn" id="closeCart" aria-label="Cerrar carrito">✕</button>
+    </div>
+    <div class="drawer-body" id="cartBody"></div>
+    <div class="drawer-foot" id="cartFoot"></div>
+  </aside>
+
+  <!-- Modal opinión -->
+  <div class="modal" id="reviewModal">
+    <div class="modal-card">
+      <div class="modal-head">
+        <h3>Cuéntanos tu experiencia</h3>
+        <button class="icon-btn" id="closeReviewModal" aria-label="Cerrar">✕</button>
+      </div>
+      <form id="reviewForm">
+        <label>Tu nombre
+          <input type="text" id="reviewName" required placeholder="Ej. María G.">
+        </label>
+        <label>Tu calificación</label>
+        <div class="star-picker" id="starPicker">
+          <button type="button" class="star" data-val="1">★</button>
+          <button type="button" class="star" data-val="2">★</button>
+          <button type="button" class="star" data-val="3">★</button>
+          <button type="button" class="star" data-val="4">★</button>
+          <button type="button" class="star" data-val="5">★</button>
+        </div>
+        <label>Tu comentario
+          <textarea id="reviewComment" rows="4" required placeholder="¿Qué te pareció tu experiencia con ICEKING?"></textarea>
+        </label>
+        <button type="submit" class="btn btn-primary">Publicar opinión</button>
+      </form>
+    </div>
+  </div>
+
+<script>
+(function(){
+  var flavors = [
+    {id:'fresa', name:'Fresa con Crema', cat:'frutal', price:8000, emoji:'🍓'},
+    {id:'mango', name:'Mango', cat:'frutal', price:7500, emoji:'🥭'},
+    {id:'limon', name:'Limón', cat:'frutal', price:7000, emoji:'🍋'},
+    {id:'cookies', name:'Cookies &amp; Cream', cat:'cremosa', price:9000, emoji:'🍪'},
+    {id:'chocobelga', name:'Chocolate Belga', cat:'cremosa', price:9500, emoji:'🍫'},
+    {id:'maracuya', name:'Maracuyá', cat:'frutal', price:7500, emoji:'🍈'},
+    {id:'coco', name:'Coco', cat:'cremosa', price:8000, emoji:'🥥'},
+    {id:'cafe', name:'Café Espresso', cat:'especial', price:9000, emoji:'☕'},
+    {id:'arequipe', name:'Arequipe', cat:'especial', price:8500, emoji:'🍮'},
+    {id:'mora', name:'Mora', cat:'frutal', price:7500, emoji:'🫐'},
+    {id:'pistacho', name:'Pistacho', cat:'especial', price:10000, emoji:'🥜'},
+    {id:'vainilla', name:'Vainilla Bourbon', cat:'cremosa', price:8000, emoji:'🍦'}
+  ];
+  var featuredIds = ['fresa','mango','limon','cookies','chocobelga','maracuya'];
+
+  var reviewsSeed = [
+    {name:'María G.', rating:5, text:'El sabor a fresa con crema me recordó a los helados de mi infancia, pero mucho más natural. ¡Encantada!'},
+    {name:'Carlos R.', rating:5, text:'Pedí para el cumpleaños de mi hija y fueron todo un éxito con los invitados. Volveré a pedir seguro.'},
+    {name:'Andrea P.', rating:4, text:'Excelente calidad, el chocolate belga es mi favorito. Me encantaría ver más tamaños disponibles.'},
+    {name:'Julián M.', rating:5, text:'La entrega fue puntual y las paletas llegaron perfectas. Se nota el cuidado artesanal en cada detalle.'},
+    {name:'Sofía T.', rating:5, text:'Maracuyá y limón son un golpe de frescura, ideales para el calor de Bogotá. Muy recomendados.'},
+    {name:'Diego L.', rating:5, text:'Atención al cliente increíble y sabores que realmente enamoran. Cien por ciento recomendados.'}
+  ];
+
+  var cart = [];
+  var reviews = reviewsSeed.slice();
+  var selectedStar = 5;
+  var currentCat = 'todos';
+
+  function $(sel, ctx){ return (ctx||document).querySelector(sel); }
+  function $all(sel, ctx){ return Array.prototype.slice.call((ctx||document).querySelectorAll(sel)); }
+  function formatPrice(n){ return '$' + n.toLocaleString('es-CO'); }
+  function initials(name){
+    return name.trim().split(/\s+/).map(function(w){ return w[0]; }).slice(0,2).join('').toUpperCase();
+  }
+  function starString(rating){ return '★'.repeat(rating) + '☆'.repeat(5-rating); }
+
+  function showToast(msg){
+    var el = document.createElement('div');
+    el.className = 'toast';
+    el.textContent = msg;
+    $('#toastContainer').appendChild(el);
+    requestAnimationFrame(function(){ el.classList.add('show'); });
+    setTimeout(function(){
+      el.classList.remove('show');
+      setTimeout(function(){ el.remove(); }, 300);
+    }, 2600);
+  }
+
+  // ---------------- NAVEGACIÓN ----------------
+  function showPage(id){
+    $all('.page').forEach(function(p){ p.classList.toggle('active', p.id === 'page-'+id); });
+    $all('.nav-link').forEach(function(l){ l.classList.toggle('active', l.dataset.nav === id); });
+    window.scrollTo({top:0, behavior:'smooth'});
+    closeMobileMenu();
+    closeSearch();
+  }
+  $all('[data-nav]').forEach(function(el){
+    el.addEventListener('click', function(e){
+      e.preventDefault();
+      showPage(el.dataset.nav);
+    });
+  });
+
+  // ---------------- MENÚ MÓVIL ----------------
+  var mainNav = $('#mainNav');
+  var mobileMenuBtn = $('#mobileMenuBtn');
+  function closeMobileMenu(){ mainNav.classList.remove('open'); }
+  mobileMenuBtn.addEventListener('click', function(){ mainNav.classList.toggle('open'); });
+
+  // ---------------- BÚSQUEDA ----------------
+  var searchBar = $('#searchBar');
+  var searchInput = $('#searchInput');
+  function openSearch(){ searchBar.classList.add('open'); setTimeout(function(){ searchInput.focus(); }, 200); }
+  function closeSearch(){ searchBar.classList.remove('open'); }
+  $('#searchToggle').addEventListener('click', function(){
+    searchBar.classList.contains('open') ? closeSearch() : openSearch();
+  });
+  $('#searchClose').addEventListener('click', closeSearch);
+  searchInput.addEventListener('input', function(e){ applyFilter(currentCat, e.target.value); });
+  searchInput.addEventListener('keydown', function(e){
+    if(e.key === 'Enter'){
+      e.preventDefault();
+      setActiveChip('todos');
+      showPage('sabores');
+      applyFilter('todos', searchInput.value);
+    }
+  });
+
+  // ---------------- SABORES ----------------
+  function flavorCard(f){
+    return '<div class="flavor-card" data-cat="'+f.cat+'" data-name="'+f.name.toLowerCase()+'">'+
+      '<div class="ph flavor-ph"><span class="ph-icon">'+f.emoji+'</span></div>'+
+      '<h3>'+f.name+'</h3>'+
+      '<span class="flavor-price">'+formatPrice(f.price)+'</span>'+
+      '<button class="btn btn-add" data-id="'+f.id+'">+ Agregar</button>'+
+      '</div>';
+  }
+  $('#featuredGrid').innerHTML = flavors.filter(function(f){ return featuredIds.indexOf(f.id) !== -1; }).map(flavorCard).join('');
+  $('#fullGrid').innerHTML = flavors.map(flavorCard).join('');
+
+  $all('.btn-add').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var f = flavors.filter(function(fl){ return fl.id === btn.dataset.id; })[0];
+      addToCart(f);
+      var original = btn.textContent;
+      btn.textContent = '✓ Agregado';
+      btn.classList.add('added');
+      setTimeout(function(){ btn.textContent = original; btn.classList.remove('added'); }, 1200);
+    });
+  });
+
+  // ---------------- FILTROS ----------------
+  var chips = $all('.chip');
+  function setActiveChip(cat){
+    currentCat = cat;
+    chips.forEach(function(c){ c.classList.toggle('active', c.dataset.cat === cat); });
+  }
+  chips.forEach(function(chip){
+    chip.addEventListener('click', function(){
+      setActiveChip(chip.dataset.cat);
+      applyFilter(chip.dataset.cat, searchInput.value);
+    });
+  });
+  function applyFilter(cat, query){
+    var q = (query||'').toLowerCase().trim();
+    $all('#fullGrid .flavor-card').forEach(function(card){
+      var matchesCat = cat === 'todos' || card.dataset.cat === cat;
+      var matchesQuery = !q || card.dataset.name.indexOf(q) !== -1;
+      card.style.display = (matchesCat && matchesQuery) ? '' : 'none';
+    });
+  }
+
+  // ---------------- CARRITO ----------------
+  function addToCart(f){
+    var existing = cart.filter(function(i){ return i.id === f.id; })[0];
+    if(existing){ existing.qty++; }
+    else{ cart.push({id:f.id, name:f.name, price:f.price, emoji:f.emoji, qty:1}); }
+    updateCart();
+    showToast(f.name.replace('&amp;','&') + ' agregado al carrito ' + f.emoji);
+  }
+  function changeQty(id, delta){
+    var item = cart.filter(function(i){ return i.id === id; })[0];
+    if(!item) return;
+    item.qty += delta;
+    if(item.qty <= 0){ cart = cart.filter(function(i){ return i.id !== id; }); }
+    updateCart();
+  }
+  function removeFromCart(id){
+    cart = cart.filter(function(i){ return i.id !== id; });
+    updateCart();
+  }
+  function cartTotal(){
+    return cart.reduce(function(sum,i){ return sum + i.price*i.qty; }, 0);
+  }
+  function updateCart(){
+    var count = cart.reduce(function(s,i){ return s+i.qty; }, 0);
+    var badge = $('#cartBadge');
+    badge.textContent = count;
+    badge.style.display = count > 0 ? 'flex' : 'none';
+    renderCartDrawer();
+  }
+  function renderCartDrawer(){
+    var body = $('#cartBody');
+    var foot = $('#cartFoot');
+    if(cart.length === 0){
+      body.innerHTML = '<div class="cart-empty"><span>🛒</span><p>Tu carrito está vacío</p></div>';
+      foot.innerHTML = '';
+      return;
+    }
+    body.innerHTML = cart.map(function(i){
+      return '<div class="cart-item">'+
+        '<div class="cart-item-emoji">'+i.emoji+'</div>'+
+        '<div class="cart-item-info">'+
+          '<h4>'+i.name+'</h4>'+
+          '<span>'+formatPrice(i.price)+'</span>'+
+          '<div class="qty-control">'+
+            '<button data-action="dec" data-id="'+i.id+'" aria-label="Restar">−</button>'+
+            '<span>'+i.qty+'</span>'+
+            '<button data-action="inc" data-id="'+i.id+'" aria-label="Sumar">+</button>'+
+          '</div>'+
+        '</div>'+
+        '<button class="cart-item-remove" data-action="remove" data-id="'+i.id+'" aria-label="Eliminar">✕</button>'+
+        '</div>';
+    }).join('');
+    foot.innerHTML = '<div class="cart-subtotal"><span>Subtotal</span><span>'+formatPrice(cartTotal())+'</span></div>'+
+      '<button class="btn btn-primary" id="checkoutBtn">Finalizar pedido</button>'+
+      '<button class="btn-link" id="continueShopping">Seguir comprando</button>';
+    $('#checkoutBtn').addEventListener('click', function(){
+      showToast('¡Gracias por tu pedido! Te contactaremos para coordinar la entrega 👑');
+      cart = [];
+      updateCart();
+      closeCartDrawer();
+    });
+    $('#continueShopping').addEventListener('click', closeCartDrawer);
+    $all('[data-action="inc"]', body).forEach(function(b){ b.addEventListener('click', function(){ changeQty(b.dataset.id, 1); }); });
+    $all('[data-action="dec"]', body).forEach(function(b){ b.addEventListener('click', function(){ changeQty(b.dataset.id, -1); }); });
+    $all('[data-action="remove"]', body).forEach(function(b){ b.addEventListener('click', function(){ removeFromCart(b.dataset.id); }); });
+  }
+
+  var overlay = $('#overlay');
+  var cartDrawer = $('#cartDrawer');
+  function openCartDrawer(){ cartDrawer.classList.add('open'); overlay.classList.add('show'); }
+  function closeCartDrawer(){ cartDrawer.classList.remove('open'); overlay.classList.remove('show'); }
+  $('#cartToggle').addEventListener('click', openCartDrawer);
+  $('#closeCart').addEventListener('click', closeCartDrawer);
+  overlay.addEventListener('click', function(){
+    closeCartDrawer();
+    closeReviewModal();
+  });
+  updateCart();
+
+  // ---------------- OPINIONES ----------------
+  function reviewCard(r){
+    return '<div class="review-card">'+
+      '<div class="review-head">'+
+        '<div class="avatar">'+initials(r.name)+'</div>'+
+        '<div><h4>'+r.name+'</h4><span class="stars">'+starString(r.rating)+'</span></div>'+
+      '</div>'+
+      '<p>'+r.text+'</p>'+
+      '</div>';
+  }
+  function renderReviews(){
+    $('#reviewsGrid').innerHTML = reviews.map(reviewCard).join('');
+    $('#testiPreview').innerHTML = reviews.slice(0,3).map(reviewCard).join('');
+  }
+  renderReviews();
+
+  var reviewModal = $('#reviewModal');
+  function openReviewModal(){ reviewModal.classList.add('open'); overlay.classList.add('show'); }
+  function closeReviewModal(){ reviewModal.classList.remove('open'); overlay.classList.remove('show'); }
+  $('#openReviewModal').addEventListener('click', openReviewModal);
+  $('#closeReviewModal').addEventListener('click', closeReviewModal);
+
+  var starButtons = $all('.star', $('#starPicker'));
+  function paintStars(val){
+    starButtons.forEach(function(s){ s.classList.toggle('active', Number(s.dataset.val) <= val); });
+  }
+  paintStars(selectedStar);
+  starButtons.forEach(function(s){
+    s.addEventListener('click', function(){
+      selectedStar = Number(s.dataset.val);
+      paintStars(selectedStar);
+    });
+  });
+
+  $('#reviewForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    var name = $('#reviewName').value.trim();
+    var text = $('#reviewComment').value.trim();
+    if(!name || !text) return;
+    reviews.unshift({name:name, rating:selectedStar, text:text});
+    renderReviews();
+    closeReviewModal();
+    e.target.reset();
+    selectedStar = 5;
+    paintStars(5);
+    showToast('¡Gracias por tu opinión! 💗');
+  });
+
+  // ---------------- CONTACTO ----------------
+  $('#contactForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    showToast('¡Mensaje enviado! Te contactaremos pronto 📩');
+    e.target.reset();
+  });
+
+  // ---------------- REDES SOCIALES ----------------
+  $all('.social-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){ showToast('Enlace de demostración: ' + btn.dataset.social); });
+  });
+
+  // ---------------- TECLA ESCAPE ----------------
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape'){
+      closeCartDrawer();
+      closeReviewModal();
+      closeSearch();
+      closeMobileMenu();
+    }
+  });
+
+})();
+</script>
 </body>
 </html>
-
-
